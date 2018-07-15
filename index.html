@@ -59,7 +59,6 @@
   		$("#fire").click(function(){
   			if(game.player_chosen !== null && game.opponent !== null){
   				game.opponent.health -= game.player_chosen.attack;
-  				game.player_chosen.attack += game.player_chosen.counter_attack;
   				game.player_chosen.health -= game.opponent.attack;
 
   				if(game.opponent.health <= 0){
@@ -79,6 +78,7 @@
   					setTimeout(function(){location.reload();}, 2000);
   				}else{
 	  			
+          game.player_chosen.attack += game.player_chosen.counter_attack;
 	  				$("#battle").append('<p>You '+game.player_chosen.name + ' hit ' + game.opponent.name + ' with ' +game.player_chosen.attack+'.</p>');
 	  				$("#battle").append('<p>You are now at '+ game.player_chosen.health + ' and ' + game.opponent.name + ' is at '+ game.opponent.health+'.</p>');
 	  				$("#battle").append('<p>Your attack is now'+ game.player_chosen.attack+'.</p>');
