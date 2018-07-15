@@ -1,0 +1,18 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+  	
+#scene1{
+	overflow: hidden;
+}
+
+.player{
+	width: 200px;
+	float: left;
+}
+
+.player img{
+	max-width: 100%;
+	max-height: 200px;
+}
